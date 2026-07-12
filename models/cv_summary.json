@@ -1,0 +1,10 @@
+{
+  "accuracy_mean": 0.9059223093159735,
+  "accuracy_std": 0.05615094602419255,
+  "precision_mean": 0.5624622058108655,
+  "recall_mean": 0.8135956982703509,
+  "f1_mean": 0.6487174978626338,
+  "auc_mean": 0.9371173084550545,
+  "total_time_min": 7.379801340897878,
+  "target_met": true
+}
