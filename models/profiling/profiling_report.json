@@ -1,0 +1,60 @@
+{
+  "model": "A.E.D.A.S. CNN 1D",
+  "date": "2026-07-07",
+  "desktop": {
+    "fp32": {
+      "bench": {
+        "mean_ms": 0.08607600000686944,
+        "std_ms": 0.009900910669773388,
+        "min_ms": 0.08019991219043732,
+        "max_ms": 0.1338999718427658,
+        "p50_ms": 0.08079991675913334,
+        "p95_ms": 0.10900512570515275,
+        "p99_ms": 0.12714491924270985,
+        "fps": 11617.640223990351,
+        "n_runs": 200
+      },
+      "memory": {
+        "model_file_kb": 166.6015625,
+        "weights_kb": 158.05859375,
+        "activations_kb": 372.4921875,
+        "runtime_overhead_kb": 10.0,
+        "total_flash_kb": 176.6015625,
+        "total_ram_kb": 382.4921875
+      }
+    },
+    "int8": {
+      "bench": {
+        "mean_ms": 0.02615100471302867,
+        "std_ms": 0.004352561582530325,
+        "min_ms": 0.02100015990436077,
+        "max_ms": 0.05030003376305103,
+        "p50_ms": 0.023399945348501205,
+        "p95_ms": 0.031214999035000798,
+        "p99_ms": 0.04260986112058162,
+        "fps": 38239.44857850111,
+        "n_runs": 200
+      },
+      "memory": {
+        "model_file_kb": 56.359375,
+        "weights_kb": 40.40234375,
+        "activations_kb": 93.1259765625,
+        "runtime_overhead_kb": 10.0,
+        "total_flash_kb": 66.359375,
+        "total_ram_kb": 103.1259765625
+      }
+    }
+  },
+  "embedded_projection": {
+    "cpu": "ARM Cortex-M7 @ 400MHz (ex. STM32H743)",
+    "latency_conservative_ms": 0.39226507069543004,
+    "latency_cmsis_nn_ms": 0.2615100471302867,
+    "cycles_conservative": 156906.02827817202,
+    "cycles_cmsis_nn": 104604.01885211468,
+    "flash_kb": 66.359375,
+    "ram_kb": 105.1259765625,
+    "fits_cortex_m4": false,
+    "fits_cortex_m7": true,
+    "realtime_compatible": 1
+  }
+}
