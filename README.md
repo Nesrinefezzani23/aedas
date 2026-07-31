@@ -105,6 +105,37 @@ Assurez-vous d'avoir **Python 3.11** installé sur votre système.
 
 ---
 
+## 📈 État d'Avancement & Performances
+
+Le système a atteint ses objectifs de performance en environnement simulé :
+*   **Précision de Détection :** **90.6%** (Accuracy) / **0.93** (AUC) sur validation croisée 10-fold.
+*   **Optimisation :** Modèle quantifié **INT8** (TFLite) prêt pour déploiement (réduction de ~75% de la taille mémoire).
+*   **Localisation :** Erreur angulaire moyenne (MAE) inférieure à **15°** en environnement bruité (SNR 10dB).
+
+---
+
+## 🛠️ Fonctionnalités Implémentées
+
+### 🧠 Intelligence Artificielle
+- **CNN 1D Temps-Réel :** Analyse des patterns temporels MFCC (13 coefficients).
+- **Quantification Post-Entraînement :** Conversion INT8 complète pour microcontrôleurs (Cortex-M).
+- **Pipeline de Data Augmentation :** Mélange dynamique de bruits urbains (UrbanSound8K) et domestiques (ESC-50).
+
+### 📡 Localisation TDOA (Direction of Arrival)
+- **Algorithme GCC-PHAT :** Estimation robuste du délai entre 4 microphones virtuels.
+- **Cartographie 360° :** Détermination du quadrant d'approche (FRONT, REAR, LEFT, RIGHT).
+
+### 🏎️ Simulation Acoustique & Cinématique (SIL)
+- **Effet Doppler Dynamique :** Simulation du décalage fréquentiel selon la vitesse relative des véhicules.
+- **Environnement Cabine :** Modélisation du bruit moteur, de roulement (asphalte/gravier) et de l'acoustique intérieure.
+- **Scénarios Routiers :** Simulations d'approches frontales, d'intersections et de dépassements.
+
+### 🔌 Intégration Véhicule
+- **Bus CAN Virtuel :** Envoi de messages normalisés (ID 0x1A0-0x1A3) pour les alertes et les actions correctives (baisse volume audio).
+- **Interface Dashboard :** Visualisation en temps réel de la détection et de la direction d'approche.
+
+---
+
 ## 🚧 Statut du Projet
 
-Le projet est actuellement **en cours de développement actif** (Phase de prototypage et de traitement du signal). Les contributions au pipeline de traitement IA et à l'estimation directionnelle TDOA sont en cours de structuration.
+Le projet est en phase de **validation finale du système SIL**. La prochaine étape majeure est l'intégration complète du tableau de bord avec le moteur de simulation de scénarios.
